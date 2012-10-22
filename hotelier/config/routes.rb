@@ -1,4 +1,12 @@
 Hotelier::Application.routes.draw do
+
+  devise_for :users
+
+match '/about', to: 'pages#about'
+match '/contact', to: 'pages#contact'
+
+root to: 'pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
